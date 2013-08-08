@@ -8,88 +8,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@+id/button2"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignLeft="@+id/editText2"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_toRightOf="@+id/lblApiKey"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button4"
-        android:layout_alignBottom="@+id/button4"
-        android:layout_marginLeft="22dp"
-        android:layout_toRightOf="@+id/button4"
-        android:text="Button" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_alignTop="@+id/lblApiKey"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lblApiKey"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="80dp"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/lblApiKey"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lblClientID"
-        android:layout_below="@+id/lblClientID"
-        android:layout_marginTop="34dp"
-        android:text="@string/api_key" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/lblApiKey"
-        android:layout_toRightOf="@+id/lblApiKey"
-        android:ems="10" />
-
-    <TextView
-        android:id="@+id/lblClientID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/client_id" />
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+ 
+        <Button
+            android:id="@+id/buttonMostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mostrar"
+            android:text="@string/mostrar" />
+ 
+        <Button
+            android:id="@+id/buttonOcultar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="ocultar"
+            android:text="@string/ocultar" />
+    </LinearLayout>
+ 
+    <LinearLayout
+        android:id="@+id/animado"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:visibility="gone" >
+ 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
 
 </RelativeLayout>
